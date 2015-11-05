@@ -6,9 +6,9 @@ class SessionsController < ApplicationController
   def create
     omniauth_info = request.env['omniauth.auth']['info']
     credentials = request.env['omniauth.auth']['credentials']
-    previous_token = cookies[:access_token]
+    user = User.find_by_gmail_address(omniauth_info['email'])
 
-    if previous_token && (user = User.find_by_access_token(previous_token))
+    if user
       user.update(access_token: credentials['token'])
     else
       User.create(

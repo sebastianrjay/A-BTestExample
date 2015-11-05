@@ -1,11 +1,12 @@
 class SessionsController < ApplicationController
-  layout false
 
   def new; end
 
   def create
     omniauth_info = request.env['omniauth.auth']['info']
     credentials = request.env['omniauth.auth']['credentials']
+    cookies[:access_token] = credentials['token']
+    cookies[:expires_at] = credentials['expires_at']
     user = User.find_by_gmail_address(omniauth_info['email'])
 
     if user
@@ -19,12 +20,9 @@ class SessionsController < ApplicationController
       )
     end
 
-    cookies[:access_token] = credentials['token']
-    cookies[:expires_at] = credentials['expires_at']
-
-    puts "Access token:"
+    puts "SessionsController access token:"
     puts cookies[:access_token]
-    puts "Expires at:"
+    puts "SessionsController expires_at:"
     puts cookies[:expires_at].to_s
 
     redirect_to root_url

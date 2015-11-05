@@ -20,11 +20,6 @@ class SessionsController < ApplicationController
       )
     end
 
-    puts "SessionsController access token:"
-    puts cookies[:access_token]
-    puts "SessionsController expires_at:"
-    puts cookies[:expires_at].to_s
-
     redirect_to root_url
   end
 end

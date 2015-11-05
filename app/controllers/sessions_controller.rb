@@ -24,6 +24,6 @@ class SessionsController < ApplicationController
     cookies[:access_token] = credentials['token']
     cookies[:expires_at] = credentials['expires_at']
 
-    render :create
+    redirect_to root_url
   end
 end

@@ -24,6 +24,6 @@ class SessionsController < ApplicationController
     cookies[:access_token] = credentials['token']
     cookies[:expires_at] = credentials['expires_at']
 
-    redirect_to new_rating_url
+    redirect_to root_url
   end
 end

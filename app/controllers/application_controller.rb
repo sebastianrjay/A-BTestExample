@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     puts "ApplicationController expires_at:"
     puts cookies[:expires_at]
 
-    if access_token && expiration && (expiration < Time.now.to_i)
+    if access_token && expiration && (expiration > Time.now.to_i)
       return User.find_by_access_token(access_token)
     end
 

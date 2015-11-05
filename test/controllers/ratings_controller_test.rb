@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GmailOauthTest < ActiveSupport::TestCase
+class RatingsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

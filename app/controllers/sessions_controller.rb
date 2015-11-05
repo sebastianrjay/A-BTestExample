@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    @request_env = request.env
+    @omniauth_info = request.env['omniauth.auth']
     @auth = request.env['omniauth.auth']['credentials']
     GmailOauth.create(
       access_token: @auth['token'],

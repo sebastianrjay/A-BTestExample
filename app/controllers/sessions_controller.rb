@@ -24,8 +24,10 @@ class SessionsController < ApplicationController
     cookies[:access_token] = credentials['token']
     cookies[:expires_at] = credentials['expires_at']
 
-    puts "Access token:\n" + cookies[:access_token]
-    puts "Expires at:\n" + cookies[:expires_at].to_s
+    puts "Access token:"
+    puts cookies[:access_token]
+    puts "Expires at:"
+    puts cookies[:expires_at].to_s
 
     redirect_to root_url
   end

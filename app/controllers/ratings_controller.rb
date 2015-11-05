@@ -8,7 +8,5 @@ class RatingsController < ApplicationController
     else
       redirect_to new_session_url
     end
-
-    render :new
   end
 end

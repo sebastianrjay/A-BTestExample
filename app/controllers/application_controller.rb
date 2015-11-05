@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     access_token = cookies[:access_token]
-    expiration = cookies[:expires_at]
+    expiration = cookies[:expires_at].to_i
 
     if access_token && expiration && expiration < Time.now.to_i
       User.find_by_access_token(access_token)

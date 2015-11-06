@@ -1,1 +1,13 @@
 <h1>Signed in via Gmail Oauth</h1>
+
+<h2>omniauth_info</h2>
+<% @omniauth_info.each do |key, value| %>
+<h3><%= key %></h3>
+<p><%= value %></p>
+<% end %>
+
+<h2>credentials</h2>
+<% @credentials.each do |key, value| %>
+<h3><%= key %></h3>
+<p><%= value %></p>
+<% end %>

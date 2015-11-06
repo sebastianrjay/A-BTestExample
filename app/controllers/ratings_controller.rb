@@ -8,6 +8,8 @@ class RatingsController < ApplicationController
   end
 
   def create
+    params[:reason] = nil if params[:reason] == "Reason (optional)"
+
     Rating.create(
       stars: params[:rating].to_i,
       reason: params[:reason],

@@ -24,6 +24,8 @@
           _inviteLink = 'localhost:3000/invites/' + payload.data.gmail_address;
           DataHub.emit(Constants.INVITE_LINK_CREATED)
         }
+      } else if (payload.actionType === Constants.SIGNUP_SUBMITTED) {
+        DataHub.emit(Constants.SIGNUP_SUBMITTED);
       }
 
       return true;

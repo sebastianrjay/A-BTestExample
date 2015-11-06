@@ -1,1 +1,1 @@
-<%= react_component('RatingPage', { gmailAddress: URLcrypt.encrypt(current_user.gmail_address) }) %>
+<%= react_component('RatingPage', { gmailAddress: Base64.urlsafe_encode64(current_user.gmail_address) }) %>

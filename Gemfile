@@ -32,9 +32,6 @@ gem 'omniauth-google-oauth2'
 gem 'react-rails', '~> 1.4.0'
 gem 'flux-rails-assets'
 
-# URL-safe encryption, for emails
-gem 'urlcrypt', '~> 0.1.1', require: 'URLcrypt'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

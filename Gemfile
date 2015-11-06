@@ -28,6 +28,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-google-oauth2'
 
+# React-Flux
+gem 'react-rails', '~> 1.4.0'
+gem 'flux-rails-assets'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -4,11 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_user
-    access_token = cookies[:access_token]
-    expiration = cookies[:expires_at].to_i
+    gmail_token, expiration = cookies[:gmail_token], cookies[:expires_at].to_i
 
-    if access_token && expiration && (expiration > Time.now.to_i)
-      return User.find_by_access_token(access_token)
+    if gmail_token && expiration && expiration > Time.now.to_i
+      return @current_user ||= User.find_by_gmail_token(gmail_token)
     end
 
     nil

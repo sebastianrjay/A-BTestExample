@@ -1,7 +1,6 @@
 class Rating < ActiveRecord::Base
 
-  belongs_to(:submitter,
-    class_name: 'User',
-    foreign_key: :submitter_id
-  )
+  def submitter
+    User.find_by_gmail_address(self.submitter_gmail_address)
+  end
 end

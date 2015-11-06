@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
-  
-  has_many(:ratings,
-    class_name: 'Rating',
-    foreign_key: 'submitter_id'
-  )
+
+  def ratings
+    Rating.where("submitter_gmail_address = ?", self.gmail_address)
+  end
 end

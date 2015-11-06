@@ -1,5 +1,11 @@
 var RatingForm = React.createClass({
 
+    deletePlaceholder: function() {
+      if(this.state.reason === "Reason (optional)") {
+        this.setState({ reason: "" });
+      }
+    },
+
     getInitialState: function() {
       return { rating: 5, reason: "Reason (optional)" };
     },
@@ -7,7 +13,7 @@ var RatingForm = React.createClass({
     _onSubmit: function(e) {
       e.preventDefault();
       var data = { rating: this.state.rating, reason: this.state.reason,
-        gmailAddress: this.props.gmailAddress };
+        gmail_address: this.props.gmailAddress };
       PageActions.submitRating(data);
       ApiActions.submitRating(data);
     },
@@ -24,7 +30,7 @@ var RatingForm = React.createClass({
             <option value="2">☆☆</option>
             <option value="1">☆</option>
           </select><br />
-          <textarea value={ this.state.reason }
+          <textarea value={ this.state.reason } onClick={ this.deletePlaceholder }
             onChange={ this.updateReason }></textarea>
           <br /><button type="submit">Submit Rating</button>
         </form>

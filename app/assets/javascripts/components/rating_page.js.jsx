@@ -20,6 +20,7 @@ var RatingPage = React.createClass({
 
   render: function() {
     var bottomContent = "", topContent = <h2>Thank you for submitting!</h2>
+    
     if(!this.state.ratingSubmitted) {
       topContent = <RatingForm gmailAddress={ this.props.gmailAddress } />
     }
@@ -34,7 +35,7 @@ var RatingPage = React.createClass({
         </div>
       )
     }
-    
+
     return (
       <div id='rating-page'>
         { topContent }

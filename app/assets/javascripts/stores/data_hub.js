@@ -21,7 +21,7 @@
         DataHub.emit(Constants.RATING_SUBMITTED);
 
         if(payload.data.rating > 3) {
-          _inviteLink = 'localhost:3000/invites/' + payload.data.gmailAddress;
+          _inviteLink = 'localhost:3000/invites/' + payload.data.gmail_address;
           DataHub.emit(Constants.INVITE_LINK_CREATED)
         }
       }

@@ -4,7 +4,7 @@ class AnalyticsController < ApplicationController
     # We want to compare signups and conversion rates from when the new feature
     # was introduced until the present, and for the same time period before the
     # feature was introduced.
-    feature_introduction_date = DateTime.new(2015, 11, 8)
+    feature_introduction_date = DateTime.new(2015, 11, 6)
     pre_feature_start_date = DateTime.strptime((feature_introduction_date.to_i -
       (DateTime.now.to_i - feature_introduction_date.to_i)).to_s, '%s')
 

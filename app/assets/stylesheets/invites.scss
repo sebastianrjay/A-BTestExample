@@ -1,3 +1,16 @@
 // Place all the styles related to the Invites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#invite-link {
+  color: #2020FF;
+  font-size: 18px;
+}
+
+#invite-link-container {
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  width: 100%;
+}

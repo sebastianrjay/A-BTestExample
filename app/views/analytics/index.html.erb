@@ -1,0 +1,24 @@
+<h2>Analytics Page for Ratings and Invites Feature</h2>
+
+<table style="width: 100%">
+  <tr style="font-weight: bold">
+    <td>Variable Name</td>
+    <td>Value Before Feature Introduction</td>
+    <td>Value After Feature Introduction</td>
+  </tr>
+  <tr>
+    <td>Signups</td>
+    <td><%= @previous_signup_count %></td>
+    <td><%= @new_signup_count %></td>
+  </tr>
+  <tr>
+    <td>Invitations</td>
+    <td><%= @previous_invite_count %></td>
+    <td><%= @new_invite_count %></td>
+  </tr>
+  <tr>
+    <td>Invite Conversion Rate</td>
+    <td><%= @previous_conversion_rate %></td>
+    <td><%= @new_conversion_rate %></td>
+  </tr>
+</table>

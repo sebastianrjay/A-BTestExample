@@ -8,7 +8,9 @@ class InvitesController < ApplicationController
 
     cookies[:invited_user_cookie] ||= SecureRandom.urlsafe_base64
 
-    if @referring_user &&
+    # Save a new invite if the user has not logged in before, and has not opened
+    # this invite page before
+    if @referring_user && !cookies[:gmail_token] &&
         !(cookies[:referring_users] || []).include?(@referring_user.gmail_address)
       cookies[:referring_users] ||= []
       cookies[:referring_users] << @referring_user.gmail_address

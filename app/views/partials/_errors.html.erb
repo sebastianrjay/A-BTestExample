@@ -1,4 +1,4 @@
-<% if flash[:errors] && flash[:errors].is_a?(Array) %>
+<% if flash[:errors] %>
   <ul>
     <% flash[:errors].each do |error| %>
     <li><%= error %></li>

@@ -14,7 +14,7 @@ class SignupsController < ApplicationController
     else
       flash[:errors] = @signup.errors.full_messages
       redirect_to(url_for(controller: :invites, action: :show,
-        id: params[:referring_gmail_address]))
+        id: Base64.urlsafe_encode64(params[:referring_gmail_address])))
     end
   end
 end

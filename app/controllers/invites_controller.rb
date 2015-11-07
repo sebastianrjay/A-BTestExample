@@ -16,6 +16,8 @@ class InvitesController < ApplicationController
         creator_gmail_address: @referring_user.gmail_address,
         invited_user_cookie: cookies[:invited_user_cookie]
       )
+    elsif @referring_user
+      render :show
     else
       raise ActionController::RoutingError.new('Not Found')
     end

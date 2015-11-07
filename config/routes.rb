@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :invites, only: :show
   resources :ratings, only: :create
   resources :sessions, only: :new
-  resources :signups, only: :create
+  resources :signups, only: [:create, :show]
 end

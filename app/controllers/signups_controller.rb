@@ -10,11 +10,14 @@ class SignupsController < ApplicationController
         linkedin_url: params[:linkedin_url]
       )
     if @signup.save
-      redirect_to root_url
+      redirect_to(url_for(controller: :signups, action: :show,
+        id: Base64.urlsafe_encode64(params[:first_name])))
     else
       flash[:errors] = @signup.errors.full_messages
       redirect_to(url_for(controller: :invites, action: :show,
         id: Base64.urlsafe_encode64(params[:referring_gmail_address])))
     end
   end
+
+  def show; end
 end

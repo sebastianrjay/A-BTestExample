@@ -1,7 +1,0 @@
-== README
-
-I built this app in 3 days. Featuring Gmail user authentication, it is a user
-invite platform for a website. It tracks invites, signups and the invite-signup
-conversion rate. Analytics are viewable {here.}[https://young-refuge-6353.herokuapp.com/analytics]
-
-Check out the {LIVE APP}[https://young-refuge-6353.herokuapp.com/]

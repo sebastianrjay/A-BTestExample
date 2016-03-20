@@ -10,10 +10,10 @@ link to invite a friend to the app.
 * Users who open the invite link can sign up to join the Concierge service.
 
 The app tracks unique invites and signups by using cookies. It also features an 
-(analytics page)[https://young-refuge-6353.herokuapp.com/analytics], which 
+[analytics page](https://young-refuge-6353.herokuapp.com/analytics/), which 
 displays the conversion rate from invites to signups.
 
-Check out the (LIVE APP)[https://young-refuge-6353.herokuapp.com/]!
+Check out the [LIVE APP](https://young-refuge-6353.herokuapp.com)!
 
 # To-Do
 

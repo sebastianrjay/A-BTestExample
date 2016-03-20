@@ -7,7 +7,7 @@ I built this app in 3 days.
 had with "Bob."
 * If they rate their meeting with a 4 or 5-star rating, the app provides them a 
 link to invite a friend to the app.
-* Users who open the invite link can sign up to join the Concierge service.
+* Users who open the invite link can sign up to join the "Concierge" service.
 
 The app tracks unique invites and signups by using cookies. It also features an 
 [analytics page](https://young-refuge-6353.herokuapp.com/analytics/), which 

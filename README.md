@@ -1,7 +1,7 @@
 # About
 
 I built this app in 3 days. It records A/B testing metrics on a mocked up 
-website feature.
+website feature, and features Gmail Oauth.
 
 Check it out the interface for tested users 
 [here](https://young-refuge-6353.herokuapp.com).

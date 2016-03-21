@@ -39,7 +39,7 @@ be conducted as follows:
 that the data shows that c_1 is greater, which it is on the app)
 * Level of significance: 0.05
 
-Then, we perform a one-sided binomial hypothesis test (perhaps in 
+Then, we perform a one-sided binomial hypothesis test (perhaps in Python or 
 [R](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/binom.test.html)):
 
 * Input
